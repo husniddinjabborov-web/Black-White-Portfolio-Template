@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+aside {
+    width: 40%;
+    height: 100vh;
+    background-color: #222222;
+    background-image: url('./img/profile_girl.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999999999999999999999;
+}
+
+
+header,
+main,
+footer {
+    width: min(calc(100% - 40%), 1000px);
+    margin: auto;
+    position: relative;
+    left: calc(40% / 2);
+    padding: 15px;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    right: 0;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 999999999999999999;
+    padding: 0;
+    width: calc(100% - (40% / 2));
+}
+
+.menu-btn {
+    padding: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label:hover {
+    background-color: #ddd;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: -60%;
+    width: 60%;
+    height: 100%;
+    background-color: black;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #ddd;
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked~nav {
+    right: 0;
+    opacity: 1;
+}
+
+
+nav a {
+    color: gray;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    font-size: xx-large;
+    text-align: center;
+    position: relative;
+    top: calc(50% / 2);
+}
+
+nav label {
+    position: absolute;
+    right: 0;
+
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+nav a:hover,
+nav label:hover {
+    color: white;
+}
+
+
+
+/* main */
+
+.banner {
+    text-align: center;
+    margin: auto;
+    width: min(100%, 400px);
+}
+.banner h1 {
+    font-size: 4em;
+    padding: 8px 16px;
+    margin-top: 100px;
+}
+.banner p {
+    padding: 8px 16px;
+}
+.banner img {
+    border-radius: 4px;
+    display: none;
+}
+.banner button {
+    padding: 15px 30px;
+    margin: 15px 30px;
+    border: none;
+    cursor: pointer;
+}
+.banner button:hover {
+    background-color: #ddd;
+}
+
+
+/*  */
+
+.portfolio {
+    margin: 100px 0;
+}
+
+.portfolio h2 {
+    padding: 16px 0;
+    font-size: 2em;
+    font-weight: 100;
+    color: gray;
+}
+
+
+.portfolio .portfolio-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.portfolio .portfolio-container .portfolio-left,
+.portfolio .portfolio-container .portfolio-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.about {
+    margin: 50px 0;
+}
+
+.about h2 {
+    padding: 16px 0;
+    font-size: 2em;
+    font-weight: 100;
+    color: gray;
+}
+.about p {
+    padding: 50px 0;
+    font-size: large;
+    text-align: justify;
+    color: gray;
+    line-height: 1.5;
+}
+
+.skills h2 {
+    padding: 16px 0;
+    font-size: 2em;
+    font-weight: 100;
+    color: gray;
+}
+
+.skills p {
+    padding: 16px 0;
+    letter-spacing: 4px;
+    color: gray;
+}
+
+
+.photography {
+    width: 100%;
+    height: 35px;
+    background-color: #F1F1F1;
+}
+
+.photography .photo {
+    height: 100%;
+    background-color: #616161;
+    color: white;
+    width: calc(100% - 5%);
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: inherit;
+    line-height: 35px;
+}
+
+.w-design {
+    width: 100%;
+    height: 35px;
+    background-color: #F1F1F1;
+}
+
+.w-design .design {
+    height: 100%;
+    background-color: #616161;
+    color: white;
+    width: calc(100% - 15%);
+    text-align: center;
+    border-radius: inherit;
+    font-size: 0.9em;
+    line-height: 35px;
+}
+
+.photoshop {
+    width: 100%;
+    height: 35px;
+    background-color: #F1F1F1;
+}
+
+.photoshop .photosh {
+    height: 100%;
+    background-color: #616161;
+    color: white;
+    width: calc(100% - 20%);
+    text-align: center;
+    border-radius: inherit;
+    font-size: 0.9em;
+    line-height: 35px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #616161;
+    margin: 50px 0 30px 0;
+    color: white;
+}
+
+.skills-container .skills-item {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    font-size: large;
+    gap: 5px;
+}
+.skills-container .skills-item span:first-child {
+    font-size: 1.5em;
+}
+
+.skills button {
+    padding: 10px 20px;
+    border: none;
+    display: inline-block;
+    background-color: #F1F1F1;
+    font-size: large;
+}
+
+.skills button:hover {
+    background-color: #ddd;
+}
+
+.reputation {
+    margin: 50px 0;
+}
+
+.reputation h2 {
+    padding: 16px 0;
+    font-size: 2em;
+    font-weight: 100;
+    color: gray;
+}
+
+.reputation ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reputation ul li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.reputation ul li .reputation-img {
+    width: 90px;
+}
+
+.reputation ul li .reputation-img img {
+    border-radius: 50%;
+}
+.reputation ul li .reputation-head {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.reputation ul li .reputation-head p {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: gray;
+}
+.reputation ul li .reputation-head p span:first-child {
+    font-size: x-large;
+    color: rgb(36, 35, 35);
+}
+
+.price {
+    margin: 50px 0;
+}
+
+.price h2 {
+    padding: 16px 0;
+    font-size: 2em;
+    font-weight: 100;
+    color: gray;
+}
+
+
+.price h2 {
+    font-weight: 500;
+    padding: 0 0 30px 0;
+
+}
+
+.price .price-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.price .price-container .price-item {
+    flex: 1 1 calc(30% - 5px);
+    box-shadow: 0 0 5px gray;
+}
+
+.price .price-container .price-item:hover {
+    box-shadow: 0 0 15px gray;
+}
+
+.price .price-container .price-item:first-child .price-head {
+    background-color: #616161;
+}
+
+.price .price-container .price-item:last-child .price-head {
+    background-color: black;
+}
+
+
+.price .price-container .price-item .price-head h2 {
+    font-size: 2.5em;
+    font-weight: normal;
+    color: white;
+    padding: 28px;
+    text-align: center;
+}
+
+.price .price-container .price-item .price-body {
+    background-color: white;
+    color: gray;
+}
+
+.price .price-container .price-item .price-body>span {
+    display: block;
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.price .price-container .price-item .price-body .span {
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.price .price-container .price-item .price-body .span span {
+    font-size: 2.5em;
+}
+
+.price .price-container .price-item .price-body .span p {
+    text-align: center;
+}
+
+.price .price-container .price-item .price-ftr {
+    padding: 26px;
+    background-color: #ddd;
+}
+
+.price .price-container .price-item .price-ftr button {
+    display: block;
+    margin: auto;
+    background-color: white;
+    border: none;
+    padding: 16px 26px;
+    cursor: pointer;
+}
+
+.price .price-container .price-item .price-ftr button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.contact {
+    margin: 50px 0;
+}
+
+.contact h2 {
+    padding: 16px 0;
+    font-size: 2em;
+    font-weight: 100;
+    color: gray;
+}
+
+
+.contact address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.contact address p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: gray;
+}
+
+.contact address p i {
+    color: gray;
+    font-size: 2.5em;
+}
+
+.contact form {
+    margin: 50px 0;
+}
+
+.contact form p {
+    color: gray;
+}
+
+.contact form input {
+    padding: 20px 15px;
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 4px;
+    font-size: large;
+}
+
+.contact form button {
+    padding: 15px 20px;
+    border: none;
+    display: inline-block;
+    background-color: #F1F1F1;
+    font-size: large;
+}
+
+.contact form button:hover {
+    background-color: #ddd;
+}
+
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: gray;
+    background-color: #F7F7F7;
+    padding: 100px;
+}
+
+footer .ftr i {
+    font-size: xx-large;
+}
+
+footer p a {
+    color: inherit;
+}
+
+
+
+
+@media (max-width: 992px) {
+    aside {
+        display: none;
+    }
+    header,
+    main,
+    footer {
+        width: min(100%, 1000px);
+        left: 0;
+    }
+    .banner img {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .portfolio .portfolio-container {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .skills-container {
+        flex-direction: column;
+    }
+    .price .price-container .price-item {
+        flex: 1 1 100%;
+    }
+
+}
